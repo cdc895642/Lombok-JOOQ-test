@@ -33,6 +33,22 @@
       <artifactId>spring-boot-starter-jooq</artifactId>
     </dependency>
 
+    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.jooq/jooq-meta &ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.jooq</groupId>-->
+      <!--<artifactId>jooq-meta</artifactId>-->
+      <!--<version>3.10.1</version>-->
+    <!--</dependency>-->
+
+
+    <!-- https://mvnrepository.com/artifact/org.jooq/jooq-codegen -->
+    <dependency>
+      <groupId>org.jooq</groupId>
+      <artifactId>jooq-codegen</artifactId>
+      <version>3.10.1</version>
+    </dependency>
+
+    
     <!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
     <dependency>
       <groupId>postgresql</groupId>
