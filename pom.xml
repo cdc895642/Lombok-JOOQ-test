@@ -23,7 +23,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
-    <org.jooq.version>3.10.1</org.jooq.version>
+    <org.jooq.version>3.9.6</org.jooq.version>
     <properties-maven-plugin.version>1.0.0</properties-maven-plugin.version>
   </properties>
 
@@ -33,22 +33,6 @@
       <artifactId>spring-boot-starter-jooq</artifactId>
     </dependency>
 
-    <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.jooq/jooq-meta &ndash;&gt;-->
-    <!--<dependency>-->
-      <!--<groupId>org.jooq</groupId>-->
-      <!--<artifactId>jooq-meta</artifactId>-->
-      <!--<version>3.10.1</version>-->
-    <!--</dependency>-->
-
-
-    <!-- https://mvnrepository.com/artifact/org.jooq/jooq-codegen -->
-    <dependency>
-      <groupId>org.jooq</groupId>
-      <artifactId>jooq-codegen</artifactId>
-      <version>3.10.1</version>
-    </dependency>
-
-    
     <!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
     <dependency>
       <groupId>postgresql</groupId>
