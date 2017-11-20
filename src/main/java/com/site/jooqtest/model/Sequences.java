@@ -24,6 +24,21 @@ import org.jooq.impl.SequenceImpl;
 public class Sequences {
 
     /**
+     * The sequence <code>public.epictable_mytable_key_seq</code>
+     */
+    public static final Sequence<Long> EPICTABLE_MYTABLE_KEY_SEQ = new SequenceImpl<Long>("epictable_mytable_key_seq", Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+
+    /**
+     * The sequence <code>public.producers_id_seq</code>
+     */
+    public static final Sequence<Long> PRODUCERS_ID_SEQ = new SequenceImpl<Long>("producers_id_seq", Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+
+    /**
+     * The sequence <code>public.products_products_id_seq</code>
+     */
+    public static final Sequence<Long> PRODUCTS_PRODUCTS_ID_SEQ = new SequenceImpl<Long>("products_products_id_seq", Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+
+    /**
      * The sequence <code>public.user_ids</code>
      */
     public static final Sequence<Long> USER_IDS = new SequenceImpl<Long>("user_ids", Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));

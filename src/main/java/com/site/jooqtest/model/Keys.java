@@ -4,11 +4,18 @@
 package com.site.jooqtest.model;
 
 
+import com.site.jooqtest.model.tables.Epictable;
+import com.site.jooqtest.model.tables.Producers;
+import com.site.jooqtest.model.tables.Products;
 import com.site.jooqtest.model.tables.Users;
+import com.site.jooqtest.model.tables.records.EpictableRecord;
+import com.site.jooqtest.model.tables.records.ProducersRecord;
+import com.site.jooqtest.model.tables.records.ProductsRecord;
 import com.site.jooqtest.model.tables.records.UsersRecord;
 
 import javax.annotation.Generated;
 
+import org.jooq.ForeignKey;
 import org.jooq.Identity;
 import org.jooq.UniqueKey;
 import org.jooq.impl.AbstractKeys;
@@ -32,28 +39,45 @@ public class Keys {
     // IDENTITY definitions
     // -------------------------------------------------------------------------
 
+    public static final Identity<EpictableRecord, Integer> IDENTITY_EPICTABLE = Identities0.IDENTITY_EPICTABLE;
+    public static final Identity<ProducersRecord, Integer> IDENTITY_PRODUCERS = Identities0.IDENTITY_PRODUCERS;
+    public static final Identity<ProductsRecord, Integer> IDENTITY_PRODUCTS = Identities0.IDENTITY_PRODUCTS;
     public static final Identity<UsersRecord, Integer> IDENTITY_USERS = Identities0.IDENTITY_USERS;
 
     // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final UniqueKey<EpictableRecord> EPICTABLE_PKEY = UniqueKeys0.EPICTABLE_PKEY;
+    public static final UniqueKey<ProducersRecord> PRODUCERS_PKEY = UniqueKeys0.PRODUCERS_PKEY;
+    public static final UniqueKey<ProductsRecord> PRODUCTS_PKEY = UniqueKeys0.PRODUCTS_PKEY;
     public static final UniqueKey<UsersRecord> USERS_PKEY = UniqueKeys0.USERS_PKEY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final ForeignKey<ProductsRecord, ProducersRecord> PRODUCTS__FK_PRODUCER_ID = ForeignKeys0.PRODUCTS__FK_PRODUCER_ID;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
     // -------------------------------------------------------------------------
 
     private static class Identities0 extends AbstractKeys {
+        public static Identity<EpictableRecord, Integer> IDENTITY_EPICTABLE = createIdentity(Epictable.EPICTABLE, Epictable.EPICTABLE.MYTABLE_KEY);
+        public static Identity<ProducersRecord, Integer> IDENTITY_PRODUCERS = createIdentity(Producers.PRODUCERS, Producers.PRODUCERS.ID);
+        public static Identity<ProductsRecord, Integer> IDENTITY_PRODUCTS = createIdentity(Products.PRODUCTS, Products.PRODUCTS.PRODUCTS_ID);
         public static Identity<UsersRecord, Integer> IDENTITY_USERS = createIdentity(Users.USERS, Users.USERS.ID);
     }
 
     private static class UniqueKeys0 extends AbstractKeys {
+        public static final UniqueKey<EpictableRecord> EPICTABLE_PKEY = createUniqueKey(Epictable.EPICTABLE, "epictable_pkey", Epictable.EPICTABLE.MYTABLE_KEY);
+        public static final UniqueKey<ProducersRecord> PRODUCERS_PKEY = createUniqueKey(Producers.PRODUCERS, "producers_pkey", Producers.PRODUCERS.ID);
+        public static final UniqueKey<ProductsRecord> PRODUCTS_PKEY = createUniqueKey(Products.PRODUCTS, "products_pkey", Products.PRODUCTS.PRODUCTS_ID);
         public static final UniqueKey<UsersRecord> USERS_PKEY = createUniqueKey(Users.USERS, "users_pkey", Users.USERS.ID);
+    }
+
+    private static class ForeignKeys0 extends AbstractKeys {
+        public static final ForeignKey<ProductsRecord, ProducersRecord> PRODUCTS__FK_PRODUCER_ID = createForeignKey(com.site.jooqtest.model.Keys.PRODUCERS_PKEY, Products.PRODUCTS, "products__fk_producer_id", Products.PRODUCTS.PRODUCER_ID);
     }
 }

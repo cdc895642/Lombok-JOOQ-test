@@ -4,6 +4,9 @@
 package com.site.jooqtest.model;
 
 
+import com.site.jooqtest.model.tables.Epictable;
+import com.site.jooqtest.model.tables.Producers;
+import com.site.jooqtest.model.tables.Products;
 import com.site.jooqtest.model.tables.Users;
 
 import javax.annotation.Generated;
@@ -21,6 +24,21 @@ import javax.annotation.Generated;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tables {
+
+    /**
+     * The table <code>public.epictable</code>.
+     */
+    public static final Epictable EPICTABLE = com.site.jooqtest.model.tables.Epictable.EPICTABLE;
+
+    /**
+     * The table <code>public.producers</code>.
+     */
+    public static final Producers PRODUCERS = com.site.jooqtest.model.tables.Producers.PRODUCERS;
+
+    /**
+     * The table <code>public.products</code>.
+     */
+    public static final Products PRODUCTS = com.site.jooqtest.model.tables.Products.PRODUCTS;
 
     /**
      * The table <code>public.users</code>.
