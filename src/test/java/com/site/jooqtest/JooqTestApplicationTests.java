@@ -11,6 +11,7 @@ public class JooqTestApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
 	}
 
 }

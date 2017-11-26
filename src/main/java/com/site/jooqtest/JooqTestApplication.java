@@ -1,6 +1,7 @@
 package com.site.jooqtest;
 
 import com.site.jooqtest.model.tables.Producers;
+import com.site.jooqtest.model.tables.Products;
 import com.site.jooqtest.model.tables.records.ProducersRecord;
 import com.site.jooqtest.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ public class JooqTestApplication implements CommandLineRunner {
 
   @Autowired
   ProductService productService;
+
 
   public static void main(String[] args) {
     SpringApplication.run(JooqTestApplication.class, args);
